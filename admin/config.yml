@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "uploads"
+media_folder: "uploads" # Wo hochgeladene Bilder gespeichert werden
 public_folder: "/uploads"
 
 collections:
