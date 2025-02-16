@@ -15,3 +15,4 @@ collections:
       - { name: "title", label: "Titel", widget: "string" }
       - { name: "date", label: "Datum", widget: "datetime" }
       - { name: "body", label: "Inhalt", widget: "markdown" }
+
