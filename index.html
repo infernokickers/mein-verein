@@ -20,19 +20,19 @@
             justify-content: center;
         }
         .header img {
-            height: 144px;
+            height: 260px;
         }
         .nav {
             background: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 20px;
+            padding: 20px 0;
+            font-size: 24px;
             font-weight: bold;
         }
         .nav a {
             text-decoration: none;
             color: black;
-            margin: 0 25px;
+            margin: 0 30px;
             transition: color 0.3s;
         }
         .nav a:hover {
@@ -74,17 +74,23 @@
             margin-top: 50px;
             text-align: center;
         }
+        .main-sponsor {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
         .main-sponsor img {
             width: 100%;
             max-width: 300px;
         }
         .small-sponsors {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
         }
-        .small-sponsor img {
-            width: 100px;
+        .small-sponsors img {
+            width: 120px;
             height: auto;
         }
         @media (max-width: 768px) {
@@ -94,8 +100,11 @@
                 align-items: center;
             }
             .small-sponsors {
-                flex-direction: column;
-                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .small-sponsors img {
+                width: 80px;
             }
         }
     </style>
@@ -129,7 +138,7 @@
         <a href="kontakt.html">Kontakt</a>
     </div>
     <div class="content">
-        <h1 style="font-size: 26px;">Willkommen bei den Inferno Kickers</h1>
+        <h1 style="font-size: 22px;">Willkommen bei den Inferno Kickers</h1>
         <div class="news-container">
             <div class="news-slide">Das erste Fussballcamp startet am 18.02.2025 im Sportzentrum Gries. Wir erwarten 43 Kinder zwischen 7 und 11 Jahren.</div>
             <div class="news-slide">Das erste Fussballcamp startet am 18.02.2025 im Sportzentrum Gries. Wir erwarten 43 Kinder zwischen 7 und 11 Jahren.</div>
@@ -146,12 +155,13 @@
             <img src="ZKB_Logo.png" alt="Hauptsponsor ZKB">
         </div>
         <div class="small-sponsors">
-            <img src="STRAGA.jpeg" class="small-sponsor">
-            <img src="BELUNDA.jpeg" class="small-sponsor">
-            <img src="GARTENPROFIS.jpeg" class="small-sponsor">
-            <img src="FF.jpeg" class="small-sponsor">
-            <img src="DEMIRI.jpeg" class="small-sponsor">
+            <img src="STRAGA.jpeg" alt="Sponsor 1">
+            <img src="BELUNDA.jpeg" alt="Sponsor 2">
+            <img src="GARTENPROFIS.jpeg" alt="Sponsor 3">
+            <img src="FF.jpeg" alt="Sponsor 4">
+            <img src="DEMIRI.jpeg" alt="Sponsor 5">
         </div>
     </div>
 </body>
 </html>
+
