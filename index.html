@@ -117,6 +117,7 @@
     </style>
     <script>
         let slideIndex = 0;
+        let autoSlide = true;
         function showSlides(index = null) {
             let slides = document.getElementsByClassName("news-slide");
             let indicators = document.getElementsByClassName("news-indicator");
@@ -126,13 +127,16 @@
             }
             if (index !== null) {
                 slideIndex = index;
-            } else {
+                autoSlide = false;
+            } else if (autoSlide) {
                 slideIndex++;
                 if (slideIndex >= slides.length) { slideIndex = 0; }
             }
             slides[slideIndex].style.display = "block";
             indicators[slideIndex].style.backgroundColor = "red";
-            setTimeout(showSlides, 20000);
+            if (autoSlide) {
+                setTimeout(showSlides, 30000);
+            }
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -155,7 +159,7 @@
             <div class="news-slide">Wir bedanken uns herzlich bei unserem Hauptsponsor **ZKB** für die wertvolle Unterstützung.</div>
             <div class="news-slide">Herzlichen Dank an **DEMIRI Gartenbau, Belunda Immobilien, STRAGA, Gartenprofis und FF Werbung** für ihre großzügige Unterstützung.</div>
             <div class="news-slide">Ein besonderer Dank geht an **FF Werbung** für die tolle Partnerschaft in Bezug auf Kleider, Werbung und das Erscheinungsbild des Vereins und des Camps. Wir können dieses Unternehmen wärmstens empfehlen.</div>
-            <div class="news-slide"><a href="Preisliste 18.02.2025 Eltern.pdf" target="_blank">Menü für Eltern am 18.02.2025 anzeigen</a></div>
+            <div class="news-slide">Menü für Eltern am 18.02.2025:<br><a href="Preisliste 18.02.2025 Eltern.pdf" target="_blank">Hier anzeigen</a></div>
             <div class="news-indicators">
                 <span class="news-indicator" onclick="showSlides(0)"></span>
                 <span class="news-indicator" onclick="showSlides(1)"></span>
