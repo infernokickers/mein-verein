@@ -14,25 +14,28 @@
         }
         .header {
             background: white;
-            padding: 20px;
+            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .header img {
-            height: 200px; /* Logo doppelt so groß */
+            height: 240px; /* Logo um 80% vergrößert */
         }
         .nav {
             background: white;
             text-align: center;
-            padding: 20px 0;
-            font-size: 22px;
+            padding: 15px 0;
+            font-size: 20px;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .nav a {
             text-decoration: none;
             color: black;
-            margin: 0 30px;
+            margin: 10px 20px;
             transition: color 0.3s, transform 0.2s;
             padding: 10px;
         }
@@ -41,40 +44,41 @@
             transform: scale(1.1);
         }
         .content {
-            padding: 50px;
+            padding: 40px;
             text-align: center;
-            font-size: 22px; /* Verkleinert */
+            font-size: 22px;
         }
         .content h1 {
-            font-size: 28px; /* Willkommens-Text kleiner */
+            font-size: 28px;
         }
         .news-container {
             display: flex;
             justify-content: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
         .news-tile {
             background: red;
             padding: 25px;
             width: 80%;
             border-radius: 10px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
         }
         .sponsors {
-            margin-top: 70px;
+            margin-top: 50px;
             text-align: center;
         }
         .main-sponsor {
             background: white;
             padding: 25px;
             margin-bottom: 15px;
-            color: black;
-            font-size: 22px;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .main-sponsor img {
-            width: 200px; /* Hauptsponsor ZKB-Logo Größe */
+            width: 100%;
+            max-width: 400px;
         }
         .small-sponsors {
             display: flex;
@@ -88,8 +92,12 @@
             color: black;
             font-size: 18px;
             margin-bottom: 10px;
+            text-align: center;
         }
         @media screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
             .small-sponsors {
                 flex-direction: column;
                 align-items: center;
@@ -120,7 +128,6 @@
     </div>
     <div class="sponsors">
         <div class="main-sponsor">
-            <p>Hier kommt der Hauptsponsor</p>
             <img src="ZKB_Logo.png" alt="Hauptsponsor ZKB">
         </div>
         <div class="small-sponsors">
@@ -133,3 +140,4 @@
     </div>
 </body>
 </html>
+
