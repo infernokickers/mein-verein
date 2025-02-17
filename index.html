@@ -15,33 +15,35 @@
         .header {
             background: white;
             padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
         }
         .header img {
-            height: 260px;
+            height: 360px;
         }
         .nav {
             background: white;
             text-align: center;
-            padding: 20px 0;
-            font-size: 24px;
+            padding: 15px 0;
+            font-size: 22px;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .nav a {
             text-decoration: none;
             color: black;
-            margin: 0 30px;
-            transition: color 0.3s;
+            margin: 15px 20px;
+            transition: color 0.3s, transform 0.2s;
         }
         .nav a:hover {
             color: #ff0000;
+            transform: scale(1.1);
         }
         .content {
             padding: 40px;
             text-align: center;
-            font-size: 22px;
+            font-size: 20px;
         }
         .news-container {
             position: relative;
@@ -52,9 +54,9 @@
         .news-slide {
             display: none;
             background: red;
-            padding: 25px;
+            padding: 20px;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             text-align: center;
         }
@@ -63,12 +65,13 @@
             margin-top: 10px;
         }
         .news-indicators span {
-            height: 10px;
-            width: 10px;
+            height: 12px;
+            width: 12px;
             margin: 0 5px;
             background-color: white;
             display: inline-block;
             border-radius: 50%;
+            cursor: pointer;
         }
         .sponsors {
             margin-top: 50px;
@@ -81,13 +84,15 @@
         }
         .main-sponsor img {
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
         }
         .small-sponsors {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            align-items: center;
+            gap: 30px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         .small-sponsors img {
             width: 120px;
@@ -95,32 +100,38 @@
         }
         @media (max-width: 768px) {
             .nav {
-                display: flex;
                 flex-direction: column;
                 align-items: center;
+            }
+            .news-container {
+                max-width: 90%;
             }
             .small-sponsors {
                 flex-wrap: wrap;
                 justify-content: center;
             }
             .small-sponsors img {
-                width: 80px;
+                width: 90px;
             }
         }
     </style>
     <script>
         let slideIndex = 0;
-        function showSlides() {
+        function showSlides(index = null) {
             let slides = document.getElementsByClassName("news-slide");
             let indicators = document.getElementsByClassName("news-indicator");
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
                 indicators[i].style.backgroundColor = "white";
             }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            indicators[slideIndex - 1].style.backgroundColor = "red";
+            if (index !== null) {
+                slideIndex = index;
+            } else {
+                slideIndex++;
+                if (slideIndex >= slides.length) { slideIndex = 0; }
+            }
+            slides[slideIndex].style.display = "block";
+            indicators[slideIndex].style.backgroundColor = "red";
             setTimeout(showSlides, 20000);
         }
     </script>
@@ -138,28 +149,20 @@
         <a href="kontakt.html">Kontakt</a>
     </div>
     <div class="content">
-        <h1 style="font-size: 22px;">Willkommen bei den Inferno Kickers</h1>
+        <h1 style="font-size: 20px;">Willkommen bei den Inferno Kickers</h1>
         <div class="news-container">
-            <div class="news-slide">Das erste Fussballcamp startet am 18.02.2025 im Sportzentrum Gries. Wir erwarten 43 Kinder zwischen 7 und 11 Jahren.</div>
-            <div class="news-slide">Das erste Fussballcamp startet am 18.02.2025 im Sportzentrum Gries. Wir erwarten 43 Kinder zwischen 7 und 11 Jahren.</div>
-            <div class="news-slide">Das erste Fussballcamp startet am 18.02.2025 im Sportzentrum Gries. Wir erwarten 43 Kinder zwischen 7 und 11 Jahren.</div>
+            <div class="news-slide">Das erste Fussballcamp in Volketswil startet am 18.02.2025 im Sportzentrum Gries. Wir freuen uns auf 44 motivierte Kinder im Alter von 7 bis 11 Jahren.</div>
+            <div class="news-slide">Wir bedanken uns herzlich bei unserem Hauptsponsor **ZKB** für die wertvolle Unterstützung.</div>
+            <div class="news-slide">Herzlichen Dank an **DEMIRI Gartenbau, Belunda Immobilien, STRAGA, Gartenprofis und FF Werbung** für ihre großzügige Unterstützung.</div>
+            <div class="news-slide">Ein besonderer Dank geht an **FF Werbung** für die tolle Partnerschaft in Bezug auf Kleider, Werbung und das Erscheinungsbild des Vereins und des Camps. Wir können dieses Unternehmen wärmstens empfehlen.</div>
+            <div class="news-slide"><a href="Preisliste 18.02.2025 Eltern.pdf" target="_blank">Menü für Eltern am 18.02.2025 anzeigen</a></div>
             <div class="news-indicators">
-                <span class="news-indicator"></span>
-                <span class="news-indicator"></span>
-                <span class="news-indicator"></span>
+                <span class="news-indicator" onclick="showSlides(0)"></span>
+                <span class="news-indicator" onclick="showSlides(1)"></span>
+                <span class="news-indicator" onclick="showSlides(2)"></span>
+                <span class="news-indicator" onclick="showSlides(3)"></span>
+                <span class="news-indicator" onclick="showSlides(4)"></span>
             </div>
-        </div>
-    </div>
-    <div class="sponsors">
-        <div class="main-sponsor">
-            <img src="ZKB_Logo.png" alt="Hauptsponsor ZKB">
-        </div>
-        <div class="small-sponsors">
-            <img src="STRAGA.jpeg" alt="Sponsor 1">
-            <img src="BELUNDA.jpeg" alt="Sponsor 2">
-            <img src="GARTENPROFIS.jpeg" alt="Sponsor 3">
-            <img src="FF.jpeg" alt="Sponsor 4">
-            <img src="DEMIRI.jpeg" alt="Sponsor 5">
         </div>
     </div>
 </body>
