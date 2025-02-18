@@ -50,6 +50,7 @@
             max-width: 800px;
             margin: 20px auto;
             overflow: hidden;
+            text-align: center;
         }
         .news-slide {
             display: none;
@@ -118,6 +119,7 @@
     <script>
         let slideIndex = 0;
         let autoSlide = true;
+
         function showSlides(index = null) {
             let slides = document.getElementsByClassName("news-slide");
             let indicators = document.getElementsByClassName("news-indicator");
@@ -155,16 +157,23 @@
     <div class="content">
         <h1 style="font-size: 20px;">Willkommen bei den Inferno Kickers</h1>
         <div class="news-container">
-            <div class="news-slide">Das erste Fussballcamp in Volketswil startet am 18.02.2025 im Sportzentrum Gries. Wir freuen uns auf 44 motivierte Kinder im Alter von 7 bis 11 Jahren.</div>
-            <div class="news-slide">Wir bedanken uns herzlich bei unserem Hauptsponsor **ZKB** für die wertvolle Unterstützung.</div>
+            <div class="news-slide">Das erste Fussballcamp in **Volketswil** startet am **18.02.2025** im **Sportzentrum Gries**. Wir freuen uns auf **44 motivierte Kinder** im Alter von 7 bis 11 Jahren.</div>
+            <div class="news-slide">Wir bedanken uns herzlich bei unserem Hauptsponsor **Zürcher Kantonalbank (ZKB)** für die wertvolle Unterstützung.</div>
             <div class="news-slide">Herzlichen Dank an **DEMIRI Gartenbau, Belunda Immobilien, STRAGA, Gartenprofis und FF Werbung** für ihre großzügige Unterstützung.</div>
-            <div class="news-slide">Ein besonderer Dank geht an **FF Werbung** für die tolle Partnerschaft in Bezug auf Kleider, Werbung und das Erscheinungsbild des Vereins und des Camps. Wir können dieses Unternehmen wärmstens empfehlen.</div>
-            <div class="news-slide">Menü für Eltern am 18.02.2025:<br><a href="Preisliste 18.02.2025 Eltern.pdf" target="_blank">Hier anzeigen</a></div>
+            <div class="news-slide">Ein besonderer Dank geht an **FF Werbung** für die tolle Partnerschaft in Bezug auf **Kleider, Werbung und das Erscheinungsbild** des Vereins und des Camps. Wir können dieses Unternehmen wärmstens empfehlen.</div>
+            <div class="news-slide">**Menü für Eltern am 18.02.2025**:<br><a href="Preisliste 18.02.2025 Eltern.pdf" target="_blank">Hier anzeigen</a></div>
+            <div class="news-indicators">
+                <span class="news-indicator" onclick="showSlides(0)"></span>
+                <span class="news-indicator" onclick="showSlides(1)"></span>
+                <span class="news-indicator" onclick="showSlides(2)"></span>
+                <span class="news-indicator" onclick="showSlides(3)"></span>
+                <span class="news-indicator" onclick="showSlides(4)"></span>
+            </div>
         </div>
     </div>
     <div class="sponsors">
         <div class="main-sponsor">
-            <img src="ZKB_Logo.png" alt="Hauptsponsor ZKB">
+            <img src="ZKB_Logo.png" alt="Hauptsponsor Zürcher Kantonalbank">
         </div>
         <div class="small-sponsors">
             <img src="STRAGA.jpeg" alt="Sponsor 1">
@@ -176,4 +185,3 @@
     </div>
 </body>
 </html>
-
